@@ -141,9 +141,17 @@ export default function Home() {
               )}
             </div>
           </form>
-          <div className="flex flex-col justify-center">{joke}</div>
         </div>
       </div>
+      {joke && (
+        <div className="flex justify-center py-6">
+          <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+            <div className="flex flex-col justify-center text-gray-900 font-medium">
+              {joke}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
